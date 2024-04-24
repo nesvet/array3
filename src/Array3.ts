@@ -6,7 +6,7 @@ export class Array3 extends Array {
 	
 	// }
 	
-	concat<I>(...args: any[]): I[] {
+	concat<I>(...args: unknown[]): I[] {
 		
 		const { length } = this;
 		
@@ -28,7 +28,7 @@ export class Array3 extends Array {
 	// 	return super.copyWithin(...args);
 	// }
 	
-	filter<I>(callbackfn: (value: any, index: number, array: any[]) => I, thisArg?: any): I[] {
+	filter<I>(callbackfn: (value: I, index: number, array: Array3) => I, thisArg?: unknown): I[] {
 		
 		const filtered = [];
 		
@@ -49,7 +49,7 @@ export class Array3 extends Array {
 	// 	return super.flatMap(...args);
 	// }
 	
-	map<I>(callbackfn: (value: any, index: number, array: any[]) => I, thisArg?: any): I[] {
+	map<I>(callbackfn: (value: I, index: number, array: Array3) => I, thisArg?: unknown): I[] {
 		
 		const { length } = this;
 		
