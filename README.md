@@ -9,5 +9,5 @@ $ npm install array3
 Or
 
 ```sh
-$ yarn add array3
+$ bun add array3
 ```
