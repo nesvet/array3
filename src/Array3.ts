@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/no-new-array */
+
 export class Array3<I> extends Array<I> {
 	
 	concat(...args: unknown[]): I[] {
@@ -64,7 +66,7 @@ export class Array3<I> extends Array<I> {
 				start = 0;
 			else
 				start += length;
-		 else if (start > length)
+		else if (start > length)
 			return [];
 		
 		if (end === undefined || end > length)
@@ -108,14 +110,14 @@ export class Array3<I> extends Array<I> {
 				start = 0;
 			else
 				start += length;
-		 else if (start > length)
+		else if (start > length)
 			start = length;
 		
 		const deleted = [];
 		
 		if (deleteCount < 0)
 			deleteCount = 0;
-		else if (!isFinite(deleteCount))
+		else if (!Number.isFinite(deleteCount))
 			deleteCount = length - start;
 		
 		for (let i = 0; i < deleteCount; i++)
