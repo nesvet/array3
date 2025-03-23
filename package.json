@@ -25,7 +25,7 @@
   "author": "Eugene Nesvetaev <dev@nesvet.dev> (https://nesvet.dev/)",
   "license": "MIT",
   "devDependencies": {
-    "@nesvet/eslint-config": "^1",
+    "@nesvet/eslint-config": "^2.0.48",
     "typescript": "^5"
   }
 }
