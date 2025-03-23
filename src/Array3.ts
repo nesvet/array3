@@ -1,12 +1,6 @@
-export class Array3 extends Array {
-	// constructor(...args) {
-	// 	super(...args);
+export class Array3<I> extends Array<I> {
 	
-	// 	console.log("⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️");
-	
-	// }
-	
-	concat<I>(...args: unknown[]): I[] {
+	concat(...args: unknown[]): I[] {
 		
 		const { length } = this;
 		
@@ -28,7 +22,7 @@ export class Array3 extends Array {
 	// 	return super.copyWithin(...args);
 	// }
 	
-	filter<I>(callbackfn: (value: I, index: number, array: Array3) => I, thisArg?: unknown): I[] {
+	filter(callbackfn: (value: I, index: number, array: Array3<I>) => boolean, thisArg?: unknown): I[] {
 		
 		const filtered = [];
 		
@@ -49,7 +43,7 @@ export class Array3 extends Array {
 	// 	return super.flatMap(...args);
 	// }
 	
-	map<I>(callbackfn: (value: I, index: number, array: Array3) => I, thisArg?: unknown): I[] {
+	map<U>(callbackfn: (value: I, index: number, array: Array3<I>) => U, thisArg?: unknown): U[] {
 		
 		const { length } = this;
 		
@@ -61,7 +55,7 @@ export class Array3 extends Array {
 		return mapped;
 	}
 	
-	slice<I>(start = 0, end?: number): I[] {
+	slice(start = 0, end?: number): I[] {
 		
 		const { length } = this;
 		
@@ -93,7 +87,7 @@ export class Array3 extends Array {
 		return sliced;
 	}
 	
-	toPlainArray<I>(): I[] {
+	toPlainArray(): I[] {
 		
 		const { length } = this;
 		
@@ -105,7 +99,7 @@ export class Array3 extends Array {
 		return array;
 	}
 	
-	splice<I>(start = 0, deleteCount = 0, ...items: I[]): I[] {
+	splice(start = 0, deleteCount = 0, ...items: I[]): I[] {
 		
 		const { length } = this;
 		
